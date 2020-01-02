@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 2, 2019 11:39:12 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.Schedule" table="schedule" catalog="himacit" optimistic-lock="version">
+        <id name="idSchedule" type="java.lang.Integer">
+            <column name="id_schedule" />
+            <generator class="identity" />
+        </id>
+        <property name="namaAcara" type="string">
+            <column name="nama_acara" length="25" not-null="true" />
+        </property>
+        <property name="tanggal" type="date">
+            <column name="tanggal" length="10" not-null="true" />
+        </property>
+        <property name="namaDepartemen" type="string">
+            <column name="nama_departemen" length="25" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

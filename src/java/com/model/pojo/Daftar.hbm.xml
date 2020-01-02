@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 2, 2019 11:39:12 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.Daftar" table="daftar" catalog="himacit" optimistic-lock="version">
+        <id name="idDaftar" type="java.lang.Integer">
+            <column name="id_daftar" />
+            <generator class="identity" />
+        </id>
+        <property name="nimDaftar" type="int">
+            <column name="nim_daftar" not-null="true" />
+        </property>
+        <property name="namaDaftar" type="string">
+            <column name="nama_daftar" length="20" not-null="true" />
+        </property>
+        <property name="majorDaftar" type="string">
+            <column name="major_daftar" length="20" not-null="true" />
+        </property>
+        <property name="kelasDaftar" type="string">
+            <column name="kelas_daftar" length="20" not-null="true" />
+        </property>
+        <property name="hobby" type="string">
+            <column name="hobby" length="20" not-null="true" />
+        </property>
+        <property name="reason" type="string">
+            <column name="reason" length="40" not-null="true" />
+        </property>
+        <property name="why" type="string">
+            <column name="why" length="40" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

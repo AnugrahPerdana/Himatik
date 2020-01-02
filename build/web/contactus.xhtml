@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Contact Us</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" type="text/css" href="resources/css/bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="resources/fontawesome-free-5.8.2-web/css/all.css"/>
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css"/>
+
+        <script type="text/javascript" src="resources/js/jquery-1.9.0.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+        <script type="text/javascript" src="resources/js/bootstrap.min.js"></script>
+    </h:head>
+    <h:body>
+      <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+        <a class="navbar-brand" href="index.xhtml">HIMATIK</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link active" href="index.xhtml">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="divisi.xhtml">Division</a>
+            <a class="nav-item nav-link" href="schedule.xhtml">Schedule</a>
+            <a class="nav-item nav-link" href="contactus.xhtml">Contact Us</a>
+<!--            <a class="nav-item btn btn-primary tmbl" href="#">Registration</a>-->
+          </div>
+        </div>
+        </div>
+      </nav>
+      
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Come Join us with <span>Spirit</span> <br>and <span>Confidence</span></br></h1>
+            <a href="registration.xhtml" class="btn btn-primary tmbl">Registration</a>
+        </div>
+      </div>
+      
+        <div class="container">
+        <div class="row pt-5 mb-5">
+          <div class="col text-center">
+            <h1>Contact Us</h1>
+          </div>
+        </div>
+        
+ 
+            <div class="row">
+                <div class="col-lg-6">
+                    
+                    <h:form>
+                         <div class="form-group">
+                            <label for="nim">NIM</label>
+                            <h:inputText class="form-control" id="nim" value="#{saranBean.newuser.nim}" label="NIM" required="true" requiredMessage="You must enter nim" a:placeholder="Nim"/>
+                         </div>
+                        <div class="form-group">
+                            <label for="nama">Name</label>
+                            <h:inputText class="form-control" id="nama" value="#{saranBean.newuser.nama}" label="Name" required="true" requiredMessage="You must enter name" a:placeholder="Name"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="major">Major</label>
+                            <h:inputText class="form-control" id="major" value="#{saranBean.newuser.major}" label="Major" required="true" requiredMessage="You must enter major" a:placeholder="Major"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="kelas">Class</label>
+                            <h:inputText class="form-control" id="kelas" value="#{saranBean.newuser.kelas}" label="Kelas" required="true" requiredMessage="You must enter Class" a:placeholder="Class"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="suggestion">Suggestion</label>
+                            <h:inputTextarea class="form-control" id="suggestion" label="Suggestion" value="#{saranBean.newuser.suggestion}" required="true" requiredMessage="You must enter suggestion" a:placeholder="Suggestion"/>
+                        </div>
+                        <p:commandButton value="submit" class="btn btn-primary col text-center" process="@form" id="AddButtonId" ajax="true" actionListener="#{saranBean.addSaran()}" oncomplete="PF('$saranDetail1').hide()"/>
+                    </h:form>
+                        
+                        
+  
+       
+      
+    <h:outputScript>  
+             
+        /* 
+        <![CDATA[ */  
+function handleComplete(xhr, status, args) {  
+if(args && args.validNama) {  
+$saranDetail1.hide();  
+}  
+}  
+/* ]]>*/  
+  
+    </h:outputScript>    
+                </div>
+      
+                <div class="col-lg-5">
+                    <img src ="resources/img/himatik.png" alt="workingspace" class="img-fluid"/>
+                </div>
+            </div>
+        </div>
+        <br></br>
+        <footer class="bg-info text-white">
+            <br><br><br>
+    <div class="container">
+  <div class="row justify-content-center">
+      <div class="col-md-4">
+  
+   
+    <img src="resources/img/himatik.png" width="25%"/>
+    </div>
+    <div class="col-md-4">
+      <h2 align="center">FOLLOW US</h2>
+      
+     <CENTER>
+      <a href="https://twitter.com/TIKPNJ/"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/himatikpnj/"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/channel/UCpC1tQPtC2AjTPoZvwrqzLw"><i class="fab fa-facebook"></i></a>
+      <a href="line.me/ti/p/%40vgr9307e"><i class="fab fa-line"></i></a>
+    </CENTER> 
+  
+    </div> 
+    </div>
+    </div>
+                        </br></br></br> 
+ </footer>
+    </h:body>
+</html>
+

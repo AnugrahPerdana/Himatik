@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 2, 2019 11:39:12 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.Saran" table="saran" catalog="himacit" optimistic-lock="version">
+        <id name="idSaran" type="java.lang.Integer">
+            <column name="id_saran" />
+            <generator class="identity" />
+        </id>
+        <property name="nim" type="int">
+            <column name="nim" not-null="true" />
+        </property>
+        <property name="nama" type="string">
+            <column name="nama" length="20" not-null="true" />
+        </property>
+        <property name="major" type="string">
+            <column name="major" length="20" not-null="true" />
+        </property>
+        <property name="kelas" type="string">
+            <column name="kelas" length="20" not-null="true" />
+        </property>
+        <property name="suggestion" type="string">
+            <column name="suggestion" length="100" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

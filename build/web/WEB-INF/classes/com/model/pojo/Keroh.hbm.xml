@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 2, 2019 11:39:12 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.pojo.Keroh" table="keroh" catalog="himacit" optimistic-lock="version">
+        <id name="idKeroh" type="java.lang.Integer">
+            <column name="id_keroh" />
+            <generator class="identity" />
+        </id>
+        <property name="judulKeroh" type="string">
+            <column name="judul_keroh" length="25" not-null="true" />
+        </property>
+        <property name="deskripsiKeroh" type="string">
+            <column name="deskripsi_keroh" length="100" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

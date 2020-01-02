@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Registration</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" type="text/css" href="resources/css/bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="resources/fontawesome-free-5.8.2-web/css/all.css"/>
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css"/>
+
+        <script type="text/javascript" src="resources/js/jquery-1.9.0.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+        <script type="text/javascript" src="resources/js/bootstrap.min.js"></script>
+    </h:head>
+    <h:body>
+      <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+        <a class="navbar-brand" href="index.xhtml">HIMATIK</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link active" href="index.xhtml">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="divisi.xhtml">Division</a>
+            <a class="nav-item nav-link" href="schedule.xhtml">Schedule</a>
+            <a class="nav-item nav-link" href="contactus.xhtml">Contact Us</a>
+<!--            <a class="nav-item btn btn-primary tmbl" href="#">Registration</a>-->
+          </div>
+        </div>
+        </div>
+      </nav>
+      
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Come Join us with <span>Spirit</span> <br>and <span>Confidence</span></br></h1>
+            
+        </div>
+      </div>
+      
+        <div class="container">
+        <div class="row pt-5 mb-5">
+          <div class="col text-center">
+            <h1>Registration</h1>
+          </div>
+        </div>
+        
+ 
+            <div class="row">
+                <div class="col-lg-9">
+                    <h:form style="margin-left: 275px;">
+                         <div class="form-group">
+                            <label for="nim_daftar">NIM</label>
+                            <h:inputText class="form-control" id="nimDaftar" label="NIM" required="true"  value="#{daftarBean.newuser.nimDaftar}" requiredMessage="You must enter nim" a:placeholder="NIM"/>
+                           
+                         </div>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <h:inputText class="form-control" id="namaDaftar" required="true" value="#{daftarBean.newuser.namaDaftar}" label="Name" requiredMessage="You must enter name" a:placeholder="Name"/>                      
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Major</label>
+                            <h:inputText class="form-control" id="majorDaftar" required="true" value="#{daftarBean.newuser.majorDaftar}" label="Major" requiredMessage="You must enter major" a:placeholder="Major"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Class</label>
+                            <h:inputText class="form-control" id="classDaftar" required="true" value="#{daftarBean.newuser.kelasDaftar}" label="Class" requiredMessage="You must enter major" a:placeholder="Major"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="hobby">Hobby</label>
+                            <h:inputTextarea class="form-control" id="hobby" required="true"  value="#{daftarBean.newuser.hobby}" label="Major" requiredMessage="You must enter hobby" a:placeholder="hobby"/>    
+                        </div>
+                       
+                   
+              
+
+                        <div class="form-group">
+                            <label for="rjt">Reason To Join</label>
+                            <h:inputText class="form-control" id="reason" required="true" value="#{daftarBean.newuser.reason}" requiredMessage="You must enter Reason" label="Reason" a:placeholder="Reason To Join"/>
+                            
+                        </div>
+                        <div class="form-group">
+                            <label for="give">Give reasons why we should choose you</label>
+                            <h:inputTextarea class="form-control" id="why" required="true" value="#{daftarBean.newuser.why}" requiredMessage="You must enter Give reasons why we should choose you" label="why" a:placeholder="Give reasons why we should choose you"/>
+                            
+                        </div>
+                     <p:commandButton value="submit" class="btn btn-primary col text-center" process="@form" id="AddButtonId" ajax="true" actionListener="#{daftarBean.addDaftar()}" oncomplete="PF('$daftarDetail1').hide()"/>
+          </h:form>
+                      <h:outputScript>  
+             
+        /* 
+        <![CDATA[ */  
+function handleComplete(xhr, status, args) {  
+if(args && args.validNama_daftar) {  
+$daftarDetail1.hide();  
+}  
+}  
+/* ]]>*/  
+  
+    </h:outputScript>  
+                 
+                </div>
+            </div>
+        </div>
+        <br></br>
+        <footer class="bg-info text-white">
+            <br><br><br>
+    <div class="container">
+  <div class="row justify-content-center">
+      <div class="col-md-4">
+  
+   
+    <img src="resources/img/himatik.png" width="25%"/>
+    </div>
+    <div class="col-md-4">
+      <h2 align="center">FOLLOW US</h2>
+      
+     <CENTER>
+      <a href="https://twitter.com/TIKPNJ/"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/himatikpnj/"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/channel/UCpC1tQPtC2AjTPoZvwrqzLw"><i class="fab fa-facebook"></i></a>
+      <a href="line.me/ti/p/%40vgr9307e"><i class="fab fa-line"></i></a>
+    </CENTER> 
+  
+    </div> 
+    </div>
+    </div>
+                        </br></br></br> 
+ </footer>
+    </h:body>
+</html>
+
